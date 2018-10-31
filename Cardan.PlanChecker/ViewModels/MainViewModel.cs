@@ -24,11 +24,23 @@ namespace Cardan.PlanChecker.ViewModels
         {
             EvaluateCommand = new DelegateCommand(() =>
             {
-                var id = VMS.GetValue(sc =>
+                foreach(var pc in Constraints)
                 {
-                    return sc.PlanSetup?.Id;
-                });
-                MessageBox.Show(id);
+                    var result = VMS.GetValue(sc =>
+                    {
+                        //Check if we can constrain first
+                        var canConstrain = pc.Constraint.CanConstrain(sc.PlanSetup);
+                        //If not..report why
+                        if (!canConstrain.IsSuccess) { return canConstrain; }
+                        else
+                        {
+                            //Can constrain - so do it
+                            return pc.Constraint.Constrain(sc.PlanSetup);
+                        }
+                    });
+                    //Update UI
+                    pc.Result = result;
+                }
             });
 
             CreateConstraints();
