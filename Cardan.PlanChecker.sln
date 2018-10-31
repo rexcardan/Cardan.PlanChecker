@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardan.PlanChecker", "Cardan.PlanChecker\Cardan.PlanChecker.csproj", "{CF96B79D-4017-4A9A-8E98-5AAF4B1C104D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardan.PlanCheckerTests", "Cardan.PlanCheckerTests\Cardan.PlanCheckerTests.csproj", "{A6AB5571-A03F-4EB4-A430-752425723F45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{CF96B79D-4017-4A9A-8E98-5AAF4B1C104D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF96B79D-4017-4A9A-8E98-5AAF4B1C104D}.Release|x64.ActiveCfg = Release|x64
 		{CF96B79D-4017-4A9A-8E98-5AAF4B1C104D}.Release|x64.Build.0 = Release|x64
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6AB5571-A03F-4EB4-A430-752425723F45}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
