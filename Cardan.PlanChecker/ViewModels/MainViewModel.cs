@@ -7,6 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Common;
 using VMS.TPS.Common.Model.API;
+using Prism.Commands;
+using System.Windows;
+using F = ESAPIX.Facade.API;
+using ESAPIX.Extensions;
 
 namespace Cardan.PlanChecker.ViewModels
 {
@@ -16,56 +20,16 @@ namespace Cardan.PlanChecker.ViewModels
 
         public MainViewModel()
         {
-            //Example data bind
-            OnPlanChanged(VMS.GetValue(sc => sc.PlanSetup));
-            //Handle plan changes
-            VMS.Execute(sc =>
+            EvaluateCommand = new DelegateCommand(() =>
             {
-                sc.PlanSetupChanged += OnPlanChanged;
+                var id = VMS.GetValue(sc =>
+                {
+                    return sc.PlanSetup?.Id;
+                });
+                MessageBox.Show(id);
             });
         }
 
-        public void OnPlanChanged(PlanSetup ps)
-        {
-            VMS.Execute(sc =>
-            {
-                Id = ps?.Id;
-                UID = ps?.UID;
-                IsDoseCalculated = ps?.Dose != null;
-                NBeams = ps?.Beams.Count();
-            });
-        }
-
-        private string id;
-
-        public string Id
-        {
-            get { return id; }
-            set { SetProperty(ref id, value); }
-        }
-
-        private string uid;
-
-        public string UID
-        {
-            get { return uid; }
-            set { SetProperty(ref uid, value); }
-        }
-
-        private int? nBeams;
-
-        public int? NBeams
-        {
-            get { return nBeams; }
-            set { SetProperty(ref nBeams, value); }
-        }
-
-        private bool isDoseCalculated;
-
-        public bool IsDoseCalculated
-        {
-            get { return isDoseCalculated; }
-            set { SetProperty(ref isDoseCalculated, value); }
-        }
+        public DelegateCommand EvaluateCommand { get; set; }
     }
 }
