@@ -56,8 +56,8 @@
     <ApplicationIcon>Resources\esapix.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESAPIX, Version=1.5.2.2, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_15.5.1.5.2.4\lib\net45\ESAPIX.dll</HintPath>
+    <Reference Include="ESAPIX, Version=1.5.2.5, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ESAPIX_15.5.1.5.2.5\lib\net45\ESAPIX.dll</HintPath>
     </Reference>
     <Reference Include="ESAPIX.Bootstrapper, Version=1.5.2.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ESAPIX_Bootstrapper_15.5.1.5.2.4\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
@@ -105,10 +105,10 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.43, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_15.5.1.5.2.4\lib\net45\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>..\packages\ESAPIX_15.5.1.5.2.5\lib\net45\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.43, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_15.5.1.5.2.4\lib\net45\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>..\packages\ESAPIX_15.5.1.5.2.5\lib\net45\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -119,6 +119,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CTDateChecker.cs" />
     <Compile Include="PlanConstraint.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainView.xaml.cs">
