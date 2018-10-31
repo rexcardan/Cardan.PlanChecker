@@ -36,7 +36,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Constraints" Binding="{Binding Constraint.FullName}"/>
                     <DataGridTextColumn Header="Result" Binding="{Binding Result.ResultType}"/>
-                    <DataGridTextColumn Header="Result" Binding="{Binding Result.Message}" Width="*"/>
+                    <DataGridTextColumn Header="Message" Binding="{Binding Result.Message}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
