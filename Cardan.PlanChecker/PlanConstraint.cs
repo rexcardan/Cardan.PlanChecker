@@ -10,11 +10,11 @@ namespace Cardan.PlanChecker
 {
     public class PlanConstraint : BindableBase
     {
-        public PlanConstraint(IConstraint con, ConstraintResult result)
+        public PlanConstraint(IConstraint con)
         {
             this.Constraint = con;
-            this.Result = result;
         }
+
 
         private IConstraint _constraint;
 
